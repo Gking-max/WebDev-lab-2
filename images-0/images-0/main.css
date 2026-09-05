@@ -1,0 +1,52 @@
+/* Apply these styles to the entire visible page. */
+body {
+  /* Use the operating system's default user-interface font.
+     If unavailable, use any sans-serif font. */
+  font-family: system-ui, sans-serif;
+
+  /* Add space between the page content and the browser edges. */
+  padding: 2rem;
+}
+
+/* Style the main page heading. */
+h1 {
+  /* Make the heading 1.5 times the root font size.
+     This is usually 24px when the browser default is 16px. */
+  font-size: 1.5rem;
+
+  /* Add space below the heading before the gallery begins. */
+  margin-bottom: 1rem;
+}
+
+/* Turn the gallery container into a two-column grid. */
+.gallery {
+  /* Make .gallery a Grid layout container.
+     Its direct children become grid items. */
+  display: grid;
+
+  /* Create two equal-width columns.
+     Each column receives one fraction of the available space. */
+  grid-template-columns: 1fr 1fr;
+
+  /* Add equal spacing between rows and columns. */
+  gap: 1rem;
+
+  /* Prevent the gallery from growing wider than 620px. */
+  max-width: 620px;
+}
+
+/* Style every image inside the gallery. */
+.gallery img {
+  /* Make each image fill the width of its grid cell. */
+  width: 100%;
+
+  /* Give every image box a consistent 4:3 shape. */
+  aspect-ratio: 4 / 3;
+
+  /* Fill the 4:3 image box without stretching the image.
+     Parts of the image may be cropped to make it fit. */
+  object-fit: cover;
+
+  /* Slightly round the corners of each image. */
+  border-radius: 8px;
+}
